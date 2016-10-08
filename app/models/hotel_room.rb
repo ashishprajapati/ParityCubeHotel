@@ -1,3 +1,15 @@
+# == Schema Info
+#
+# Table name: hotel_rooms
+#
+# id                         :integer(11), not null, primary key
+# name                       :string
+# max_adults                 :integer(11)
+# max_children               :integer(11)
+# hotel_category_id          :integer(11)
+# created_at                 :datetime, not null
+# updated_at                 :datetime, not null
+
 class HotelRoom < ApplicationRecord
   # adding belongs to relationship with hotel_category
   belongs_to :hotel_category

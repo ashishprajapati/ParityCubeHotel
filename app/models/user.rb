@@ -28,4 +28,7 @@ class User < ApplicationRecord
   # has_many relationship with the bookings
   # fetching all the bookings of the user
   has_many :bookings
+
+  # These attributes should always be present
+  validates :first_name, :last_name, :mobile, presence: true
 end

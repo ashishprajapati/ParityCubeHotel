@@ -16,4 +16,7 @@ class HotelRoom < ApplicationRecord
   # has_many relationship with the bookings
   # fetching all the bookings of the hotel room
   has_many :bookings
+
+  # These attributes should always be present
+  validates :name, :max_adults, :max_children, :hotel_category_id, presence: true
 end

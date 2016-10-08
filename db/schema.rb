@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20161008183839) do
   create_table "hotel_rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "max_adults"
-    t.integer  "max_childrens"
+    t.integer  "max_children"
     t.integer  "hotel_category_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

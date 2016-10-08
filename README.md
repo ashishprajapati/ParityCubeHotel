@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Hotel room booking application
 
-Things you may want to cover:
+## Rails Version
+Rails 5.0.0.1
 
-* Ruby version
+## Ruby Version
+Ruby 2.3.1
 
-* System dependencies
+## Database
+MySQL
 
-* Configuration
+## Run Gemfile
+```
+	bundle install
+```
 
-* Database creation
+## Create Database
+```
+	rails db:create
+```
 
-* Database initialization
+## Run Migrations
+```
+	rails db:migrate
+```
 
-* How to run the test suite
+## Run Seed File
+#### Seed Data for storing the rooms category and rooms information to the database
+```
+	rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Start Server
+```
+	rails s
+```

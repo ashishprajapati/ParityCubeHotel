@@ -7,6 +7,7 @@
 # first_name                 :string
 # last_name                  :string
 # mobile  					 :string
+# authentication_token       :string(30)
 # encrypted_password         :string
 # reset_password_token  	 :string
 # reset_password_sent_at     :datetime
@@ -20,6 +21,8 @@
 # updated_at                 :datetime, not null
 
 class User < ApplicationRecord
+  # For token based authentication
+  acts_as_token_authenticatable
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

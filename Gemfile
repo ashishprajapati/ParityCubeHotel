@@ -51,3 +51,6 @@ gem 'devise'
 
 gem "twitter-bootstrap-rails"
 gem 'jquery-turbolinks'
+
+gem 'simple_token_authentication'
+

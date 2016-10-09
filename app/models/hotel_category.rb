@@ -19,4 +19,8 @@ class HotelCategory < ApplicationRecord
   def available_hotel_rooms check_in, check_out
   	hotel_rooms.available_rooms check_in, check_out
   end
+
+  def sort_name
+  	name.split("-")[0]
+  end
 end

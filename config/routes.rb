@@ -2,7 +2,15 @@ Rails.application.routes.draw do
   # Added devise routes and overrided registration controller
   devise_for :users, :controllers => { registrations: 'registrations' }
   # hotel resources only with index route
-  resources :hotel, only: :index
+  resources :hotel, only: :index do
+    get :rooms, on: :collection
+  end
+  
+  resources :bookings, only: :index
+
+  resources :hotel_categories, only: [] do
+    resources :bookings, only: [:new]
+  end
 
   # api routes
   namespace :api, defaults: {format: :json} do

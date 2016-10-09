@@ -6,7 +6,7 @@ module Api
       def create
         user = User.new(sign_up_params)
         if user.save
-          render :json=> { status: true, message: 'registration successfully', details:{:auth_token=>user.authentication_token, :first_name => user.first_name, :last_name => user.last_name, :email => user.email, :mobile=>user.mobile } }, :status=>201
+          render :json=> user, :status=>201
           return
         else
           warden.custom_failure!

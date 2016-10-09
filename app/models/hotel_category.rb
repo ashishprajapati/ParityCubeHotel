@@ -14,4 +14,9 @@ class HotelCategory < ApplicationRecord
   has_many :hotel_rooms, dependent: :destroy
   # These attributes should always be present
   validates :name, :price, presence: true
+
+  # Method for checking available rooms for particualr category
+  def available_hotel_rooms check_in, check_out
+  	hotel_rooms.available_rooms check_in, check_out
+  end
 end

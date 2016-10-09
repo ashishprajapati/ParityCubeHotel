@@ -44,7 +44,7 @@ I have used serializer for accomplishing the apis
 ## API document by postman testing
 #### Please import the url into the postman 
 Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44c88402d
-
+```json
 {
 	"variables": [],
 	"info": {
@@ -156,3 +156,4 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 		}
 	]
 }
+```

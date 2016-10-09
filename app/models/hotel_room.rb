@@ -32,9 +32,6 @@ class HotelRoom < ApplicationRecord
   # These attributes should always be present
   validates :name, :max_adults, :max_children, :hotel_category_id, presence: true
 
-  def available_rooms_as_per_cate
-  end
-
   # Checking if particular room is avaliable or not
   def available?(check_in, check_out=check_in)
   	# we are also able to search for one day booking 

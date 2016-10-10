@@ -18,12 +18,11 @@ class HotelRoom < ApplicationRecord
   has_many :bookings
 
   # Scope for checking if any of the rooms are available or not
-  scope :available?, -> (check_in, check_out=nil) { available_rooms(check_in, check_out).present? }
+  scope :available?, -> (check_in, check_out=check_in) { available_rooms(check_in, check_out).present? }
 
   # Scope for finding all the available rooms
-  scope :available_rooms, -> (check_in, check_out=nil) { 
+  scope :available_rooms, -> (check_in, check_out=check_in) { 
   	# Fetching all the booked rooms in the particular date range 
-    check_out = check_in if check_out.nil?
   	hotel_rooms = includes(:bookings=>:booking_dates).where("booking_dates.reserved_date": check_in..check_out)
   	# Filtering all the booked rooms and finding out the available rooms for particular
   	where.not(id: hotel_rooms.map(&:id))
@@ -33,8 +32,7 @@ class HotelRoom < ApplicationRecord
   validates :name, :max_adults, :max_children, :hotel_category_id, presence: true
 
   # Checking if particular room is avaliable or not
-  def available?(check_in, check_out=nil)
-    check_out = check_in if check_out.nil?
+  def available?(check_in, check_out=check_in)
   	# we are also able to search for one day booking 
   	# dates we are taking as yyyy/mm/dd
   	# example available("2016/10/9")

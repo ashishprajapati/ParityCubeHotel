@@ -35,7 +35,7 @@ module BookingValidations
     end
   end
 
-  # Method to check room availability
+  # Method to validating room availability
   def room_availability_check
     if hotel_room.present? && !hotel_room.available?(check_in, check_out)
       errors.add(:hotel_room, "is not available right now and booked already")

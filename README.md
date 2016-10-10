@@ -95,7 +95,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 			"response": []
 		},
 		{
-			"name": "Availability of rooms api",
+			"name": "Availability of rooms api dates range",
 			"request": {
 				"url": "http://localhost:3000/api/v1/hotel_rooms?check_in=2016/10/9&check_out=2016/10/14",
 				"method": "GET",
@@ -138,6 +138,26 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 			"name": "User's Rooms Booking Informations",
 			"request": {
 				"url": "http://localhost:3000/api/v1/booking_informations?user_email=ashish@gmail.com&user_token=KsWaQr3zXtQLhTq9BLVM",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Availability of rooms api single date",
+			"request": {
+				"url": "http://localhost:3000/api/v1/hotel_rooms?check_in=2016/10/9&check_out=2016/10/14",
 				"method": "GET",
 				"header": [
 					{

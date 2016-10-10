@@ -16,7 +16,7 @@ class HotelCategory < ApplicationRecord
   validates :name, :price, presence: true
 
   # Method for checking available rooms for particualr category
-  def available_hotel_rooms check_in, check_out
+  def available_hotel_rooms check_in, check_out=nil
   	hotel_rooms.available_rooms check_in, check_out
   end
 

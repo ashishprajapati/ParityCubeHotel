@@ -33,7 +33,8 @@ class HotelRoom < ApplicationRecord
   validates :name, :max_adults, :max_children, :hotel_category_id, presence: true
 
   # Checking if particular room is avaliable or not
-  def available?(check_in, check_out=check_in)
+  def available?(check_in, check_out=nil)
+    check_out = check_in if check_out.nil?
   	# we are also able to search for one day booking 
   	# dates we are taking as yyyy/mm/dd
   	# example available("2016/10/9")

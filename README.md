@@ -68,7 +68,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"first_name\":\"Ashish\",\n\t\t\"last_name\":\"Prajapati\",\n\t\t\"mobile\":\"8085665606\",\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": "{\n\t\"user\": {\n\t\t\"first_name\":\"Ashish\",\n\t\t\"last_name\":\"Prajapati\",\n\t\t\"mobile\":\"8085665606\",\n\t\t\"email\":\"mail@ashishprajapati1.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
 				},
 				"description": ""
 			},
@@ -108,7 +108,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": ""
 				},
 				"description": ""
 			},
@@ -128,7 +128,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": ""
 				},
 				"description": ""
 			},
@@ -148,7 +148,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": ""
 				},
 				"description": ""
 			},
@@ -157,7 +157,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 		{
 			"name": "Availability of rooms api single date",
 			"request": {
-				"url": "http://localhost:3000/api/v1/hotel_rooms?check_in=2016/10/9&check_out=2016/10/14",
+				"url": "http://localhost:3000/api/v1/hotel_rooms?check_in=2016/10/9",
 				"method": "GET",
 				"header": [
 					{
@@ -168,7 +168,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"mail@ashishprajapati.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": ""
 				},
 				"description": ""
 			},

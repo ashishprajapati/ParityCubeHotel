@@ -62,3 +62,20 @@
 		}
 	}
 }
+.red-validation{
+	color: #921414;
+}
+
+span.capitalize{
+	text-transform: capitalize;
+}
+.top-of-image {
+    position: absolute;
+    top: 4px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    z-index: 999;
+    background: rgba(117, 194, 204, 0.72);
+}

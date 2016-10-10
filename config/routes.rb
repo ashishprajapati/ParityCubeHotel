@@ -6,10 +6,19 @@ Rails.application.routes.draw do
     get :rooms, on: :collection
   end
   
+  # Listing our all the bookings of the user
   resources :bookings, only: :index
 
+  # Using resource hotel_categories for using the hotel_category_id for nested resources
   resources :hotel_categories, only: [] do
-    resources :bookings, only: [:new]
+    # Using booking resources
+    resources :bookings, only: [:new, :create] do 
+      collection do
+        get :search_rooms
+        # route for checkig available_rooms
+        get :available_rooms
+      end
+    end
   end
 
   # api routes

@@ -9,7 +9,7 @@ module BookingValidations
   # Method for validating check out date 
   # check_out date should be less than check_in date
   def check_out_should_be_less_than_check_in
-    if check_out < check_in
+    if check_in.present? && check_out.present? && check_out < check_in
       errors.add(:check_out, "can't be less than check in date")
     end
   end 
@@ -18,7 +18,7 @@ module BookingValidations
   # check_in date cannot be in the past
   def check_in_cannot_be_in_the_past
     if check_in.present? && check_in < Date.today
-      errors.add(:check_out, "can't be in the past")
+      errors.add(:check_in, "can't be in the past")
     end
   end 
   
@@ -34,4 +34,12 @@ module BookingValidations
       end
     end
   end
+
+  # Method to check room availability
+  def room_availability_check
+    if hotel_room.present? && !hotel_room.available?(check_in, check_out)
+      errors.add(:hotel_room, "is not available right now and booked already")
+    end
+  end
+
 end

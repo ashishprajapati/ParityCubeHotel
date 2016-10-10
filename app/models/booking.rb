@@ -36,4 +36,7 @@ class Booking < ApplicationRecord
   # Custom Validation for limiting the booking for 6 months
   # Allows booking up to 6 months in advance for room reservations
   validate :check_out_cannot_be_more_than_6_months
+
+  # Checking the hotel room availability
+  validate :room_availability_check
 end

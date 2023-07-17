@@ -68,7 +68,7 @@ Postman API Document Link : https://www.getpostman.com/collections/ebd9a4dd8cf44
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"user\": {\n\t\t\"first_name\":\"Ashish\",\n\t\t\"last_name\":\"Prajapati\",\n\t\t\"mobile\":\"8085665606\",\n\t\t\"email\":\"mail@ashishprajapati1.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
+					"raw": "{\n\t\"user\": {\n\t\t\"first_name\":\"Ashish\",\n\t\t\"last_name\":\"Prajapati\",\n\t\t\"mobile\":\"808xxxxxxx\",\n\t\t\"email\":\"mail@xxxxxxxxxxxxx.com\",\n\t\t\"password\":\"12345678\"\n\t}\n}"
 				},
 				"description": ""
 			},
